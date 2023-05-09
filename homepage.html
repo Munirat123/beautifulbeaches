@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="homepage.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <title>Homepage</title>
+    <script src="homepage.js"></script>
+    <!-- <script defer src="reveal.js"></script> -->
+    <link rel="stylesheet" href="sidebar.css" />
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+<div class="sidecontainer">
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="homepage.html">Home</a>
+    <a href="aboutus.html">About</a>
+    <a href="contactus.html">Contact</a>
+    <a href="#">Gallery</a>
+    <a href="#">Clients</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+  </div>
+  <div class="topnav">
+    <a href="homepage.html">Home</a>
+    <a href="aboutus.html">About</a>
+    <a href="contactus.html">Contact</a>
+    <a href="#">Gallery</a>
+    <a href="#">Clients</a>    
+  </div>
+</div>
+    <script src="sidebar.js"></script>
+
+<!-- Sidebar END -->
+    
+    <!-- Top section -->
+
+    <div class="top">
+        <img src="logo.png" class="logo">
+        <h3>Beautiful<span>Beaches</span></h3>
+        <div class="visits">
+        <div class="h1">User Count <div class="website-counter"></div> visits</div>
+        <button id="reset">Reset</button>
+    </div>
+</div>
+    <!-- Top section END -->
+
+   <!-- Slideshow container -->
+
+   <div class="slideshow-container">
+
+    <!-- Full images with numbers and message Info -->    
+    <div class="Containers">
+      <div class="MessageInfo">1 / 5</div>
+      <img src="beaches/congobeach.jpg" style="width:100%">
+      <div class="Info">Congo Beach</div>
+    </div>
+  
+    <div class="Containers">
+      <div class="MessageInfo">2 / 5</div>
+      <img src="beaches/brazilbeach.jpg" style="width:100%">
+      <div class="Info">Brazil Beach</div>
+    </div>
+  
+    <div class="Containers">
+      <div class="MessageInfo">3 / 5</div>
+      <img src="beaches/australiabeach.jpg" style="width:100%">
+      <div class="Info">Australia Beach</div>
+    </div>
+    
+    <div class="Containers">
+        <div class="MessageInfo">4 / 5</div>
+        <img src="beaches/cubabeach.jpg" style="width:100%">
+        <div class="Info">Cuba Beach</div>
+      </div>
+
+      <div class="Containers">
+        <div class="MessageInfo">5 / 5</div>
+        <img src="beaches/tarkwabaybeach.png" style="width:100%">
+        <div class="Info">Tarwa Bay Beach</div>
+      </div>
+  
+    <!-- Back and forward buttons -->
+    <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The circles/dots -->
+  <div style="text-align:center">
+    <span class="dots" onclick="currentSlide(1)"></span>
+    <span class="dots" onclick="currentSlide(2)"></span>
+    <span class="dots" onclick="currentSlide(3)"></span>
+    <span class="dots" onclick="currentSlide(4)"></span>
+    <span class="dots" onclick="currentSlide(5)"></span>
+  </div> 
+
+
+      <!-- Slideshow container END -->
+
+    <!-- Zones -->
+
+    <div class="zones">
+        <h1 id="north">North</h1>
+        <div class="westeast">
+        <h1 id="west">West</h1>
+        <h3>Check out beaches of each zone</h3>
+        <h1 id="east">East</h1>        
+        </div>        
+        <h1 id="south">South</h1>
+  </div>
+  
+  <!-- Zones END -->
+
+  <!-- Geolocation -->
+
+  <div class="geolocation">
+    <h1>Beaches near you</h1>
+    <div class="geofeed">
+    <div id="map">
+        <iframe id="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.948480483766!2d3.3925091251307973!3d6.400640193590004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8a9ebd72643b%3A0xebbd10a3b9370f70!2sTarkwa%20Bay%20Beach!5e0!3m2!1sen!2sng!4v1682969930426!5m2!1sen!2sng" width="1500" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- Feedback section -->
+    <div class="feedback">
+    <h1>Feedback Form</h1>
+    <form action="mailto:beautifulbeaches@gmail.com" method="post" enctype="text/plain">
+      First Name : <input type="text" name="firstname" placeholder="Enter name here">
+      Second Name : <input type="text" name="secondname"  placeholder="Enter surname here">
+      <br>
+      <br>
+      <!--It's important that both of these radio button have the same name so they behave as one component (i.e. Only one can be selected at a time)-->  
+      <input type="radio" name="gender" value="male">Male<br>
+      <input type="radio" name="gender" value="female">Female  
+      <br>
+      <br>
+      <!--This uses the new HTML "email" INPUT type which will automatically validates the email address when the SUBMIT button is clicked-->
+      Email: <input type="email" name="mail" placeholder="e-mail address">
+      <br>
+      <br>
+        Comment :<br>        
+        <textarea rows="6" cols="50" name="commentfield"></textarea>
+        <br>        
+        <br>
+        <input type="submit" value="Send Feedback" class="buttoninput">
+        <input type="reset" value="Reset" class="buttoninput">
+    </form>
+    </div>
+
+    <!-- Review section -->
+    <div class="review">
+        <div id="panel" class="panel-container">
+            <strong>How satisfied are you with our <br /> customer support performance?</strong>
+            <div class="ratings-container">
+              <div class="rating">
+                <img src="sad.png" alt="">
+                <small>Unhappy</small>
+              </div>
+      
+              <div class="rating">
+                <img src="neutral.png" alt=""/>
+                <small>Neutral</small>
+              </div>
+      
+              <div class="rating active">
+                <img src="satisfied.png" alt=""/>
+                <small>Satisfied</small>
+              </div>
+            </div>
+            <button class="btn" id="send">Send Review</button>
+          </div>          
+          <script src="script.js"></script>
+    </div>   
+    </div> 
+  </div>
+
+  <!-- Geolocation END -->  
+
+  <!-- Sitemap -->
+  <!-- Sitemap END -->
+
+  <!-- Gallery -->
+  
+  <div class="gallery">
+    <h1>Gallery</h1>
+    <div class="row">
+      <img src="beaches/cubabeach.jpg" alt="beach1" style="width:300px; height:300px;">
+    <img src="beaches/australiabeach.jpg" alt="beach2" style="width:300px; height:300px;">
+    <img src="beaches/brazilbeach.jpg" alt="beach3" style="width:300px; height:300px;">
+    <img src="beaches/calabarbeach.png" alt="beach4" style="width:300px; height:300px;">
+    <img src="beaches/congobeach.jpg" alt="beach5" style="width:300px; height:300px;">
+    </div>
+    <div class="rowtwo">
+    <img src="beaches/landmarkbeach.png" alt="beach6" style="width:300px; height:300px;">
+    <img src="beaches/lekkibeach.png" alt="beach7" style="width:300px; height:300px;">
+    <img src="beaches/miamibeach.jpg" alt="beach8" style="width:300px; height:300px;">
+    <img src="beaches/tarkwabaybeach.png" alt="beach9" style="width:300px; height:300px;">
+    <img src="beaches/thailandbeach.jpg" alt="beach10" style="width:300px; height:300px;">
+    </div>
+    <h2>Click here to see our full gallery</h2>
+  </div>
+
+
+  <!-- Gallery END -->
+
+<!-- Footer  -->
+
+<footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h3>Beautiful<span>Beaches</span></h3>
+
+        <p class="footer-links">
+          <a href="#" class="link-1">Home</a>
+          
+          <a href="#">Blog</a>
+        
+          <a href="#">Pricing</a>
+        
+          <a href="aboutus.html">About</a>
+          
+          <a href="#">Faq</a>
+          
+          <a href="contactus.html">Contact</a>
+        </p>
+
+        <p class="footer-company-name">BeautifulBeaches © 2023</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>444 Nonya road</span> Victoria Island, Lagos</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+234 8043111452</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:beautifulbeaches@gmail.com">beautifulbeaches@gmail.com</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the company</span>
+          We show beautiful beaches in your area and around the world and get you to your dream beach!
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="https://icons.theforgesmith.com"><i class="fa fa-facebook"></i></a>
+          <a href="https://icons.theforgesmith.com"><i class="fa fa-twitter"></i></a>
+          <a href="https://icons.theforgesmith.com"><i class="fa fa-linkedin"></i></a>
+
+        </div>
+
+      </div>
+
+<!-- Footer END -->
+</body>
+</html>
